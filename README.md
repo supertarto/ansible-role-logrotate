@@ -1,5 +1,5 @@
 # Ansible Logrotate
-[![CI](https://github.com/supertarto/ansible-logrotate/workflows/CI/badge.svg?event=push)](https://github.com/supertarto/ansible-logrotate/actions?query=workflow%3ACI)
+[![CI](https://github.com/supertarto/ansible-role-logrotate/actions/workflows/ci.yml/badge.svg)](https://github.com/supertarto/ansible-role-logrotate/actions/workflows/ci.yml)
 
 Install and configure logrotate with Ansible, on Debian
 
