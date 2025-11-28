@@ -1,20 +1,22 @@
 ---
+dependencies: []
+
 galaxy_info:
+  role_name: "logrotate"
   author: "Xavier Binois"
-  description: "Install and configure logrotate with Ansible "
-  role_name: logrotate
+  namespace: supertarto
+  description: "Install and configure logrotate with Ansible"
   license: "GNU General Public License v3.0"
-  min_ansible_version: 2.8
+  min_ansible_version: "2.19"
 
   platforms:
-    - name: "Debian"
+    - name: Debian
       versions:
-        - "buster"
+        - bookworm
+        - trixie
 
   galaxy_tags:
     - logrotate
     - security
     - log
     - system
-
-dependencies: []

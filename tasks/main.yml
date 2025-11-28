@@ -1,18 +1,21 @@
 ---
 - name: Install logrotate packages
-  package:
+  ansible.builtin.package:
     name: logrotate
     state: present
 
 - name: Deploy custom scripts
-  template:
+  ansible.builtin.template:
     src: logrotate-custom.j2
     dest: "{{ logrotate_conf_dir }}{{ item.name }}"
-  with_items: "{{ logrotate_scripts }}"
-  when: logrotate_scripts is defined
+    owner: root
+    group: root
+    mode: "0644"
+  loop: "{{ logrotate_scripts }}"
+
 
 - name: Delete not needed scripts
-  file:
-    path: "{{ logrotate_scripts_to_remove }}"
+  ansible.builtin.file:
+    path: "{{ item }}"
     state: absent
-  when: logrotate_scripts_to_remove is defined
+  loop: "{{ logrotate_scripts_to_remove }}"
