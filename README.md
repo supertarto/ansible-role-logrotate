@@ -1,4 +1,4 @@
-# Ansible Logrotate
+# Ansible Role Logrotate
 [![CI](https://github.com/supertarto/ansible-role-logrotate/actions/workflows/ci.yml/badge.svg)](https://github.com/supertarto/ansible-role-logrotate/actions/workflows/ci.yml)
 
 Install and configure logrotate with Ansible, on Debian
